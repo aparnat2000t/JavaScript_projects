@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input {
+           margin: auto;
+           display: block;
+        }
+        p{
+            margin: auto;
+           display: block;
+        }
+        
+    </style>
+   
+    
+</head>
+<body>
+    <!-- <h1  id="name" class="name">Heading 1</h1>
+    <h1 id="name" class="name">Heading 2</h1>
+    <h1 class="name">Heading 3</h1>
+  
+    <h2> This is a heading</h2> -->
+    
+    <input id="input" type="text" >
+    <center> <p></p></center>
+   
+    <button onclick="hello()" id="clickme">click me</button>
+    <script>
+        // let temp = document.getElementById("name")
+        // let temp2 = document.getElementsByClassName("name")
+        // console.log(temp)
+        // console.log(temp2)
+        // console.log(temp2[0])
+        // console.log(temp2[1])
+        // console.log(temp2[2])
+        // console.log(temp2[3])
+        // function hello()    {
+        // let temp = document.getElementsByTagName("h2")
+        // console.log(temp);
+        // temp[0].setAttribute("style", "color: red")
+        // }
+        function hello() {
+            let temp = document.getElementById("input").value
+             console.log(temp);
+             
+            
+        
+        document.getElementsByTagName("p")[0].innerHTML = temp      
+        
+       
+        }
+       
+    </script>
+    
+</body>
+</html>
