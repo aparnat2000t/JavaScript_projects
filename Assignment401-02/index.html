@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .classname {
+            background-color: red;
+            color: yellow;
+        }
+    </style> -->
+    <style>
+        .container{
+               display: flex;
+             
+               justify-content: center;
+               flex-direction: column;
+               align-items: center;
+
+               
+        }
+        .box{
+            border: 1px solid black;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+            margin:3px;
+            border-radius: 5px;
+            
+            
+           
+            
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1 id="hello">Hello everyone</h1>
+    <button onclick="hello()" id="clickme">click me</button>
+    <button onclick="remove()" id="clickme">click me</button> -->
+    <!-- create class dynamically using classname -->
+
+    <div class="container">
+        <div class="box">1st child</div>
+        <div class="box">2nd child</div>
+        <div class="box">3rd child</div>
+        <div class="box">4th child</div>
+        <div class="box">5th child</div>
+        <div class="box">6th child</div>
+        <div class="box">7th child</div>
+        <div class="box">8th child</div>
+        <div class="box">9th child</div>
+        <div class="box">10th child</div>
+        <div class="box">11th child</div>
+        <div class="box">12th child</div>
+        <div class="box">13th child</div>
+        <div class="box">14th child</div>
+        <div class="box">15th child</div>
+        <div class="box">16th child</div>
+        <div class="box">17th child</div>
+
+    </div>
+    <button onclick="clickhandler()">click me</button>
+    <script>
+    //      function hello() {
+    //     let temp = document.getElementById("hello")
+    //     temp.classList.add("classname")
+    // }
+    // function remove() {
+    //     let temp = document.getElementById("hello")
+    //     temp.classList.remove("classname")
+    // }
+    function clickhandler(){
+        let temp = document.getElementsByClassName("box")
+        for(let i=0; i<temp.length; i++){
+            if(i%2==1){
+                temp[i].setAttribute("style", "background-color: lime")
+                 temp[i].style.color = "white";
+
+            }
+               
+            
+        
+        
+        
+        temp[0].setAttribute("style","background-color: blue")
+        temp[8].setAttribute("style","background-color:green")
+        temp[temp.length-1].setAttribute("style","background-color: palevioletred")
+    }
+}
+
+    </script>
+   
+
+    
+</body>
+</html>
