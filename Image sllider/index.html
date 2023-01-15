@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        .Image-slider{
+          position:relative;
+          width:100%;  
+        }
+        .slide img{
+            width:100%;
+        }
+        .arrow{
+            cursor:pointer;
+            position: absolute;
+            top:45%;
+            color:black;
+            background-color: rgba(255,255,255,0.712);
+            padding: 8px 19px;
+            border-radius: 50%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .next{
+            right:10px;
+        }
+        .prev{
+            left:10px
+
+        }
+        .slide{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Image-slider">
+        <div  class="slide"><img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1629115092.png?width=360&q=4"></div>
+        <div class="slide"><img src="https://www.financialexpress.com/wp-content/uploads/2021/12/modified-royal-enfield-bullet-500-1.jpg"></div>
+        <div class="slide"><img src="https://m.media-amazon.com/images/I/61Qcg4tduFL._SL1096_.jpg"></div>
+        <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+        <span class="arrow next" onclick="controller(1)">&#10095;</span>
+    </div>
+    <script>
+        let flag  = 0;
+        function controller(x){
+            flag = flag+x;
+            slideshow(flag);
+
+        }
+        slideshow(flag);
+        function slideshow(num){
+            let slides = document.getElementsByClassName("slide");
+            if(num == slides.length){
+                flag = 0;
+                num = 0;
+            }
+            if(num < 0){
+                flag = slides.length-1;
+                num= slides.length;
+            }
+            for(let i of slides){
+                i.style.display = "none";
+
+            }
+            slides[num].style.display = "block";
+            
+        }
+    </script>
+    
+</body>
+</html>

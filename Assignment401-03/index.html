@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            border: 2px solid green;
+            padding: .5rem 1rem;
+        }
+        .card{
+            border: 2px solid blueviolet;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .maindiv{
+            border: 2px solid blueviolet;
+            width: 100vw;
+            height: 90vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <input id="input" type="text">
+    </div>
+    <!-- <div id="hello">hello div</div> -->
+    <button onclick="hello()">click me</button>
+    <!-- dynamically create tag by using createElement -->
+    <!-- <div class="card">
+        <h2>Hey My name is Aparna</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium</p>
+
+    </div> -->
+    <script>
+        // function hello(){
+            
+        //         var temp = document.createElement("h1")
+        // console.log(temp)
+        //  // add text using create textnode
+        //  let temp2 = document.createTextNode("Hello Aparna")
+        //  temp.appendChild(temp2)
+
+        // // for showing create in body we used appendchild
+        // document.body.appendChild(temp)
+
+
+        //     }
+        // we can add event listener
+        //  document.getElementById("hello").addEventListener("mouseenter", function(){
+        //     console.log("div clicked");
+        //  })
+
+        //  function hello(){
+        //     var temp = document.getElementById("hello")
+        //     temp.innerHTML= ""
+        //  }
+
+      
+        let maindiv = document.createElement("maindiv")
+            maindiv.classList.add("maindiv")
+  
+         function hello(){
+            let name = document.getElementById("input").value
+            
+            let div = document.createElement("div")
+            div.classList.add("card")
+            let h1 = document.createElement("h1")
+          
+            let h1Text = document.createTextNode('Hello my name is ${name}');
+            
+             h1.appendChild(h1Text)
+          
+             div.appendChild(h1)
+             maindiv.appendChild(div)
+             
+             document.body.appendChild(maindiv)
+
+        }
+            
+        
+        
+       
+    </script>
+</body>
+</html>
