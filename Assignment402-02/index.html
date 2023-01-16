@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .h1{
+            color:green;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1 class="h1">Geeskter</h1>
+    <p>Click on the button to add the image element</p>
+    <button onclick="hello()">Click here</button>
+    <script>
+        function hello(){
+            let temp = document.createElement("h1")
+            let image = document.createElement("img")
+            image.src = "https://digitallearning.eletsonline.com/wp-content/uploads/2022/07/Geekster-logo.jpg"
+            image.height = "100"
+            image.width = "100"
+        
+        let h1Text = document.createTextNode("Image Element Added")
+        
+        temp.appendChild(h1Text)
+        temp.style.color= "green"
+        document.getElementById("body").appendChild(temp)
+        document.getElementById("body").appendChild(image)
+
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
