@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=      , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url('https://i.postimg.cc/J49xGtPC/twinkle-little-star.gif');
+        background-repeat: repeat;
+    }
+    </style>
+</head>
+<body>
+    <main>
+
+    </main>
+     <script>
+        const main = document.querySelector("main");
+
+const content = ` 
+<div class = "wrapper">
+      <p class = "heading">Calculate a weight of an object on a planet</p>
+      <input type="text" class="text" placeholder="Mass in Kilogram">
+      <select name="planet" id="planet">
+        <option value="selectplanet" class="selectplanet">  --Select planet--  </option>
+        <option value="MERCURY" class="MERCURY">MERCURY</option>
+        <option value="VENUS" class="VENUS">VENUS</option>
+        <option value="EARTH" class="EARTH">EARTH</option>
+        <option value="MARS" class="MARS">MARS</option>
+        <option value="JUPITER" class="JUPITER">JUPITER</option>
+        <option value="SATURN" class="SATURN">SATURN</option>
+        <option value="URANUS" class="URANUS">URANUS</option>
+        <option value="NEPTUNE" class="NEPTUNE">NEPTUNE</option>
+      </select>
+      <button class = "weight">Calculate weight</button>
+      <div class="container">
+        <div class="calculate">
+        <P class= "info"> Mass is required </P>
+        </div>
+      </div> 
+`;
+main.innerHTML = content;
+
+const wrapper = document.querySelector(".wrapper");
+wrapper.style.textAlign = "center";
+wrapper.style.paddingTop = "100px";
+
+const heading = document.querySelector(".heading");
+heading.style.color = "white";
+heading.style.fontSize = "40px";
+
+const input = document.querySelector("input");
+input.style.padding = "10px 50px 10px 10px";
+
+const select = document.querySelector("select");
+select.style.padding = "10px 20px 10px 10px";
+
+const button = document.querySelector("button");
+button.style.color = "white";
+button.style.backgroundColor = "gray";
+button.style.padding = "10px";
+button.style.margin = "7px";
+
+const container = document.querySelector(".container");
+container.style.backgroundColor = "rgba(255,255,255,.1)";
+container.style.width = "70%";
+container.style.margin = "50px 0px  30px 150px";
+container.style.padding = "30px";
+
+const calculate = document.querySelector(".calculate");
+calculate.style.color = "rgba(255,255,255)";
+calculate.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+calculate.style.padding = "5px 100px";
+calculate.style.width = "30%";
+calculate.style.margin = "20px 0px 20px 150px";
+
+const information = document.querySelector(".info");
+information.style.margin = "0px";
+information.style.padding = "8px";
+information.style.fontSize = "20px";
+
+const planet = document.querySelector("select");
+
+function images(png) {
+  const img = document.createElement("img");
+  img.src = png;
+  img.style.width;
+  return img;
+}
+
+button.addEventListener("click", () => {
+  if (planet.value === "selectplanet") {
+    container.innerHTML = "";
+    container.append(calculate);
+  }
+  if (planet.value === "MERCURY") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/5NDy4S0q/mercury.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "VENUS") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/L8ht7TWt/venus.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "MARS") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/Nj46P0BH/mars.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "EARTH") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/Xv4brtMB/earth.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "JUPITER") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/52qh78XS/jupiter.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "SATURN") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/zBy4GK3K/saturn.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "NEPTUNE") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/3RpC1FRK/neptune.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+  if (planet.value === "URANUS") {
+    container.innerHTML = "";
+    container.append(images("https://i.postimg.cc/0yttKjTf/uranus.png"));
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+
+  if (input.value) {
+    container.innerHTML = "";
+    container.style.display = "flex";
+    const dispaly1 = document.createElement("div");
+    const wieght = document.createElement("div");
+    dispaly1.setAttribute("class", "theWriteUp");
+    information.innerHTML = `The Weight Of The Object On ${planet.value}`;
+    dispaly1.innerHTML = information.textContent;
+    dispaly1.appendChild(wieght);
+    dispaly1.style.color = "rgba(255,255,255,.9)";
+    dispaly1.style.fontSize = "20px";
+    dispaly1.style.backgroundColor = "rgba(255,255,255,.1)";
+    dispaly1.style.width = "450px";
+    dispaly1.style.margin = "100px  0px 130px  20px";
+    dispaly1.style.paddingTop = "20px";
+
+    wieght.style.backgroundColor = "rgba(255,255,255,.1)";
+    wieght.style.width = "100px";
+    wieght.style.margin = "25px 0px 10px 80px";
+    wieght.style.padding = "50px  20px";
+    wieght.style.borderRadius = "100px";
+    wieght.style.fontSize = "2em";
+
+    // we calculate weight by multipling mass by the gravity on the surface of the planet
+
+    if (planet.value === "MERCURY") {
+      container.append(images("https://i.postimg.cc/5NDy4S0q/mercury.png"), dispaly1);
+      let surfaceGravity = 0.38;
+      wieght.innerHTML = parseInt(input.value) * surfaceGravity;
+    }
+    if (planet.value === "VENUS") {
+      let surfaceGravity = 0.91;
+      container.append(images("https://i.postimg.cc/L8ht7TWt/venus.png"), dispaly1);
+      wieght.innerHTML = parseInt(input.value) * surfaceGravity;
+    }
+    if (planet.value === "EARTH") {
+      let surfaceGravity = 1.0;
+      container.append(images("https://i.postimg.cc/Xv4brtMB/earth.png"), dispaly1);
+      wieght.innerHTML = parseInt(input.value) * surfaceGravity;
+    }
+    if (planet.value === "MARS") {
+      let surfaceGravity = 0.38;
+      container.append(images("https://i.postimg.cc/Nj46P0BH/mars.png"), dispaly1);
+      wieght.innerHTML = parseInt(input.value) * surfaceGravity;
+    }
+    if (planet.value === "JUPITER") {
+      let surfaceGravity = 2.34;
+      container.append(images("https://i.postimg.cc/52qh78XS/jupiter.png"), dispaly1);
+      wieght.innerHTML = (parseInt(input.value) * surfaceGravity).toFixed(0)
+    }
+    if (planet.value === "SATURN") {
+      let surfaceGravity = 0.93;
+      container.append(images("https://i.postimg.cc/zBy4GK3K/saturn.png"), dispaly1);
+      wieght.innerHTML = parseInt(input.value) * surfaceGravity;
+    }
+    if (planet.value === "URANUS") {
+      let surfaceGravity = 0.92;
+      container.append(images("https://i.postimg.cc/0yttKjTf/uranus.png"), dispaly1);
+       wieght.innerHTML = (parseInt(input.value) * surfaceGravity).toFixed(0)
+     
+    }
+    if (planet.value === "NEPTUNE") {
+      let surfaceGravity = 1.12;
+      container.append(images("https://i.postimg.cc/3RpC1FRK/neptune.png"), dispaly1);
+       wieght.innerHTML = (parseInt(input.value) * surfaceGravity).toFixed(0)
+    }
+    const imagess = document.querySelector("img");
+    imagess.style.width = "50%";
+  }
+});
+
+console.log(typeof input.value);
+     </script>
+</body>
+</html>
