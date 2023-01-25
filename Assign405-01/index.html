@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="data.js"></script>
+    <script defer src="index.js"></script>
+    <style>
+        .divBox{
+             /* border: 2px solid black; */
+             background: linear-gradient(rgb(219, 211, 211),white);
+             box-shadow: 2px 5px grey;
+             
+        }
+        div h2{
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 45px;
+            color: #af690d;
+        }
+        #subheading{
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            
+
+        }
+        #buttonContainer{
+            /* border: 2px solid red; */
+            /* height: 5px; */
+            display: flex;
+            justify-content: center;
+             
+             
+        }
+        #graphTitle{
+            display: flex;
+            justify-content: center;
+            
+        }
+        #lowerdiv{
+            /* border: 2px solid red; */
+             /* background: linear-gradient(to left, #8E0E00, #af690d); */
+             border-radius: 5px;
+        }
+        #populationButton{
+            border: 2px solid black;
+        
+            background: #af690d;
+            border: #af690d;
+            margin-right: 20px;
+
+        }
+        #languageButton{
+            background: #af690d;
+            border: #af690d;
+
+        }
+        #graphContainer{
+            /* border: 2px solid black; */
+            background: linear-gradient(rgb(219, 211, 211),white);
+             box-shadow: 0px 0px 2px 5px grey;
+             
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="divBox">
+        <h2>World Country Data</h2>
+        <p id="subheading"></p>
+    </div>
+    <br>
+    <div id="lowerdiv">
+        <div id="buttonContainer">
+            <button id="populationButton" onclick="buttonOneClicked()">Population</button>
+             
+            <button id="languageButton" onclick="buttonTwoClicked()">Language</button>
+        </div>
+        <p id="graphTitle">10 most populated countries in world</p>
+        <div id="graphContainer">
+            <div id="graph"></div>
+        </div>
+    </div>
+</body>
+</html>

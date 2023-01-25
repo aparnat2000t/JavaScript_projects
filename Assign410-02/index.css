@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    position: sticky;
+    background-color: blue;
+  
+}
+header h1{
+    margin-left: 43rem;
+}
+h3{
+    margin-left: 36rem;
+    font-size: 2rem;
+}
+ #inputvalue{
+     margin-left: 38rem;
+     margin-top: 2rem;
+     width: 21rem;
+     height: 2rem;
+}
+button{
+    margin-left: 44rem;
+    width: 9rem;
+    height: 2rem;
+}
+#def{
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
